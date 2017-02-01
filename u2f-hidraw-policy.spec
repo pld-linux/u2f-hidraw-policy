@@ -23,7 +23,7 @@ described by the U2F spec.
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR="$RPM_BUILD_ROOT%{_prefix}"
+	DESTDIR="$RPM_BUILD_ROOT"
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -31,5 +31,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README.md
-%{_prefix}/lib/udev/rules.d/60-u2f-hidraw.rules
-%attr(755,root,root) %{_prefix}/lib/udev/u2f_hidraw_id
+/lib/udev/rules.d/60-u2f-hidraw.rules
+%attr(755,root,root) /lib/udev/u2f_hidraw_id
