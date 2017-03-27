@@ -4,9 +4,10 @@ Version:	1.0.2
 Release:	1
 License:	LGPL v2+
 Group:		Base
-URL:		https://github.com/amluto/u2f-hidraw-policy/
 Source0:	https://github.com/amluto/u2f-hidraw-policy/archive/%{version}.tar.gz
 # Source0-md5:	daf17918427fff12ccd5d0ce7dc53e27
+URL:		https://github.com/amluto/u2f-hidraw-policy/
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 u2f-hidraw-policy is a udev helper that detects U2F HID tokens as
@@ -21,7 +22,6 @@ described by the U2F spec.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 %{__make} install \
 	DESTDIR="$RPM_BUILD_ROOT"
 
