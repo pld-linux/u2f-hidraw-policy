@@ -1,7 +1,7 @@
 Summary:	Udev rule to allow desktop access to HIDRAW U2F tokens
 Name:		u2f-hidraw-policy
 Version:	1.0.2
-Release:	1
+Release:	2
 License:	LGPL v2+
 Group:		Base
 Source0:	https://github.com/amluto/u2f-hidraw-policy/archive/%{version}.tar.gz
